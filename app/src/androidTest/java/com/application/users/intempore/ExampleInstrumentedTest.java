@@ -1,4 +1,4 @@
-package com.example.reese.intempore;
+package com.application.users.intempore;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.reese.intempore", appContext.getPackageName());
+        assertEquals("com.example.users.intempore", appContext.getPackageName());
     }
 }

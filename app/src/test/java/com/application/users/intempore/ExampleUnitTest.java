@@ -1,4 +1,4 @@
-package com.example.reese.intempore;
+package com.application.users.intempore;
 
 import org.junit.Test;
 
