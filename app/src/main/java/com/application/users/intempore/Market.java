@@ -66,7 +66,7 @@ public class Market {
         months.put("August", 8);
         months.put("September", 9);
         months.put("October", 10);
-        months.put("Novembe", 11);
+        months.put("November", 11);
         months.put("December", 12);
         return months;
     }
