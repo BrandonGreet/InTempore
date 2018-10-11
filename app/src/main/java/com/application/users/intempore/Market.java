@@ -26,7 +26,7 @@ public class Market {
     private int currMonth;
     private int currDay;
 
-    HashMap<String, Integer> months;
+    private HashMap<String, Integer> months;
 
     private ArrayList<Market> markets;
 
@@ -68,20 +68,16 @@ public class Market {
         String[] opperationArr = this.operationSeason.split("-");
         String[] begin = opperationArr[0].split(" ");
         String[] end = opperationArr[1].split(" ");
-        int start_month = (int) this.months.get(begin[0]);
+        int start_month = this.months.get(begin[0]);
         int start_day = Integer.parseInt(begin[1]);
-        int end_month = (int) this.months.get(end[0]);
+        int end_month = this.months.get(end[0]);
         int end_day = Integer.parseInt(end[1]);
         if (this.currMonth > start_month && this.currMonth < end_month) {
             return true;
         } else if (this.currMonth == start_month) {
-            if (this.currDay > start_day) {
-                return true;
-            }
+            return this.currDay > start_day;
         } else if (this.currMonth == end_month) {
-            if (this.currDay < end_day) {
-                return true;
-            }
+            return this.currDay < end_day;
         } return false;
     }
 
